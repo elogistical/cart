@@ -60,7 +60,7 @@ class CookieStore implements Store
      */
     private function setCookie($name, $data)
     {
-        setcookie($name, $data,time()+60*60*24*30,'/);
+        setcookie($name, $data,time()+60*60*24*30,'/');
     }
 
     /**
@@ -70,7 +70,7 @@ class CookieStore implements Store
      */
     private function unsetCookie($name)
     {
-        setcookie($name, null,time() - 3600,'/);
+        setcookie($name, null,time() - 3600,'/');
         unset($_COOKIE[$name]);
     }
 }
